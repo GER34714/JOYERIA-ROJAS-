@@ -178,7 +178,7 @@
 
     .hero{
       position:relative;
-      min-height:88vh;
+      min-height:72vh;
       display:flex;
       align-items:center;
       justify-content:center;
@@ -204,7 +204,7 @@
 
     @media (max-width: 820px){
       .hero{
-        min-height:84vh;
+        min-height:64vh;
       }
 
       .hero::before{
@@ -219,16 +219,17 @@
     .hero-inner{
       position:relative;
       z-index:2;
-      width:min(1280px, 100%);
-      padding:110px 22px 90px;
-      display:grid;
-      grid-template-columns:minmax(0, 1.12fr) minmax(260px, .88fr);
-      gap:28px;
+      width:min(1100px, 100%);
+      padding:92px 22px 72px;
+      display:flex;
+      justify-content:center;
       align-items:center;
+      text-align:center;
     }
 
     .hero-copy{
-      max-width:720px;
+      max-width:760px;
+      margin:0 auto;
     }
 
     .eyebrow{
@@ -273,6 +274,7 @@
       display:flex;
       flex-wrap:wrap;
       gap:14px;
+      justify-content:center;
     }
 
     .cta,
@@ -307,19 +309,6 @@
       transform:translateY(-6px);
     }
 
-    .hero-logo-wrap{
-      display:flex;
-      justify-content:flex-end;
-      align-items:flex-start;
-    }
-
-    .hero-logo{
-      width:min(460px, 100%);
-      object-fit:contain;
-      filter: drop-shadow(0 18px 36px rgba(0,0,0,.52));
-      margin-top:-40px;
-    }
-
     .hero-fade{
       position:absolute;
       left:0;
@@ -336,6 +325,7 @@
       display:flex;
       flex-wrap:wrap;
       gap:10px;
+      justify-content:center;
     }
 
     .hero-badges span{
@@ -662,15 +652,6 @@
         grid-template-columns:1fr;
       }
 
-      .hero-logo-wrap{
-        justify-content:flex-start;
-      }
-
-      .hero-logo{
-        width:min(340px, 72vw);
-        margin-top:0;
-      }
-
       .catalog-grid{
         grid-template-columns:repeat(3, minmax(0, 1fr));
       }
@@ -694,8 +675,8 @@
 
       .nav-links.open{display:flex}
       .nav-links a{width:100%; text-align:center}
-      .hero-inner{padding-top:88px; padding-bottom:72px}
-      .hero h1{max-width:420px}
+      .hero-inner{padding-top:78px; padding-bottom:58px}
+      .hero h1{max-width:none}
       .cta-band{padding:22px}
     }
 
@@ -771,7 +752,7 @@
         <span class="eyebrow">Coleccion</span>
         <h1>Joyeria artesanal <span class="accent">con presencia y detalle</span></h1>
         <p>
-          Piezas delicadas, elegantes y pensadas para destacar. Una coleccion creada para acompañar momentos, realzar detalles y sumar presencia en cada eleccion.
+          Piezas delicadas, elegantes y pensadas para destacar. Una coleccion creada para acompañar momentos especiales, realzar detalles y sumar presencia en cada eleccion.
         </p>
 
         <div class="hero-badges">
@@ -826,7 +807,7 @@
         <h2>Piezas destacadas</h2>
       </div>
       <p class="lead" style="max-width:520px;">
-        Descubri cada pieza y encontra ese detalle especial para vos o para regalar.
+        Recorre la coleccion y descubri piezas pensadas para acompañarte o regalar.
       </p>
     </div>
 
@@ -990,6 +971,8 @@
     }, { threshold: 0.2 });
 
     observer.observe(footer);
+  
+    // Nota: descripciones exactas por pieza pendientes de revision visual directa de cada imagen.
   </script>
 </body>
 </html>
